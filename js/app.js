@@ -1,15 +1,17 @@
+// Handle Search Button
 const searchButton = () => {
   const input = document.getElementById("input-value");
   const inputValue = input.value;
-  main.innerHTML = "";
+  // Clear Search Result Field
+  result.innerHTML = "";
   fetch(`https://openapi.programming-hero.com/api/phones?search=${inputValue}`)
     .then((res) => res.json())
-    .then((data) => phoneDisplay(data.data));
-
+    .then((data) => searchResult(data.data));
+  // Clear Input Field
   input.value = "";
 };
-
-const phoneDisplay = (phones) => {
+// Handle Search Result
+const searchResult = (phones) => {
   for (const phone of phones) {
     const div = document.createElement("div");
     div.classList.add("col-lg-4");
@@ -24,6 +26,6 @@ const phoneDisplay = (phones) => {
         </div>
       </div>
     `;
-    main.appendChild(div);
+    result.appendChild(div);
   }
 };
