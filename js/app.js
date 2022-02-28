@@ -5,6 +5,8 @@ const searchButton = () => {
   const inputValue = input.value;
   // Clear Search Result Field
   result.innerHTML = "";
+  // Clear Details Field
+  details.innerHTML = "";
   if (
     inputValue.toLowerCase() == "apple" ||
     inputValue.toLowerCase() == "iphone" ||
@@ -29,8 +31,7 @@ const searchButton = () => {
     input.value = "";
     // Clear Error Message
     error.innerHTML = "";
-  }
-  else {
+  } else {
     error.innerText = "No result found!";
     // Clear Input Field
     input.value = "";
@@ -73,18 +74,18 @@ const phoneDetails = (slug) => {
         <img src="${singleDetails.image}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${singleDetails.name}</h5>
-          <p class="card-text">Release Date: ${singleDetails.releaseDate}</p>
+          <p class="card-text">Release Date: ${singleDetails?.releaseDate}</p>
           <p class="card-text">Storage: ${singleDetails.mainFeatures.storage}</p>
           <p class="card-text">Display Size: ${singleDetails.mainFeatures.displaySize}</p>
           <p class="card-text">Chipset: ${singleDetails.mainFeatures.chipSet}</p>
           <p class="card-text">Memory: ${singleDetails.mainFeatures.memory}</p>
           <p class="card-text">Sensors: ${singleDetails.mainFeatures.sensors[0]}, ${singleDetails.mainFeatures.sensors[1]}, ${singleDetails.mainFeatures.sensors[2]}, ${singleDetails.mainFeatures.sensors[3]}, ${singleDetails.mainFeatures.sensors[4]}, ${singleDetails.mainFeatures.sensors[5]}</p>
-          <p class="card-text">WLAN: ${singleDetails.others.WLAN}</p>
-          <p class="card-text">Bluetooth: ${singleDetails.others.Bluetooth}</p>
-          <p class="card-text">GPS: ${singleDetails.others.GPS}</p>
-          <p class="card-text">NFC: ${singleDetails.others.NFC}</p>
-          <p class="card-text">Radio: ${singleDetails.others.Radio}</p>
-          <p class="card-text">USB: ${singleDetails.others.USB}</p>
+          <p class="card-text">WLAN: ${singleDetails?.others?.WLAN}</p>
+          <p class="card-text">Bluetooth: ${singleDetails?.others?.Bluetooth}</p>
+          <p class="card-text">GPS: ${singleDetails?.others?.GPS}</p>
+          <p class="card-text">NFC: ${singleDetails?.others?.NFC}</p>
+          <p class="card-text">Radio: ${singleDetails?.others?.Radio}</p>
+          <p class="card-text">USB: ${singleDetails?.others?.USB}</p>
         </div>
       </div>
       `;
