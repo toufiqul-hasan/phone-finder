@@ -40,7 +40,8 @@ const searchButton = () => {
 };
 // Handle Search Result
 const searchResult = (phones) => {
-  for (const phone of phones) {
+  const first20Phones = phones.slice(0, 20);
+  for (const phone of first20Phones) {
     const div = document.createElement("div");
     div.classList.add("col-lg-4");
     div.classList.add("mb-5");
@@ -77,6 +78,7 @@ const phoneDetails = (slug) => {
           <p class="card-text">Display Size: ${singleDetails.mainFeatures.displaySize}</p>
           <p class="card-text">Chipset: ${singleDetails.mainFeatures.chipSet}</p>
           <p class="card-text">Memory: ${singleDetails.mainFeatures.memory}</p>
+          <p class="card-text">Sensors: ${singleDetails.mainFeatures.sensors[0]}, ${singleDetails.mainFeatures.sensors[1]}, ${singleDetails.mainFeatures.sensors[2]}, ${singleDetails.mainFeatures.sensors[3]}, ${singleDetails.mainFeatures.sensors[4]}, ${singleDetails.mainFeatures.sensors[5]}</p>
           <p class="card-text">WLAN: ${singleDetails.others.WLAN}</p>
           <p class="card-text">Bluetooth: ${singleDetails.others.Bluetooth}</p>
           <p class="card-text">GPS: ${singleDetails.others.GPS}</p>
