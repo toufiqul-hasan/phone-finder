@@ -21,3 +21,9 @@ header h1 {
   font-weight: 700;
   font-size: 48px;
 }
+
+#error {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+}

@@ -1,14 +1,42 @@
 // Handle Search Button
 const searchButton = () => {
   const input = document.getElementById("input-value");
+  const error = document.getElementById("error");
   const inputValue = input.value;
   // Clear Search Result Field
   result.innerHTML = "";
-  fetch(`https://openapi.programming-hero.com/api/phones?search=${inputValue}`)
-    .then((res) => res.json())
-    .then((data) => searchResult(data.data));
-  // Clear Input Field
-  input.value = "";
+  if (
+    inputValue.toLowerCase() == "apple" ||
+    inputValue.toLowerCase() == "iphone" ||
+    inputValue.toLowerCase() == "ipad" ||
+    inputValue.toLowerCase() == "watch" ||
+    inputValue.toLowerCase() == "samsung" ||
+    inputValue.toLowerCase() == "galaxy" ||
+    inputValue.toLowerCase() == "huawei" ||
+    inputValue.toLowerCase() == "nova" ||
+    inputValue.toLowerCase() == "mate" ||
+    inputValue.toLowerCase() == "enjoy" ||
+    inputValue.toLowerCase() == "oppo" ||
+    inputValue.toLowerCase() == "find" ||
+    inputValue.toLowerCase() == "pad" ||
+    inputValue.toLowerCase() == "reno" ||
+    inputValue == " "
+  ) {
+    fetch(`https://openapi.programming-hero.com/api/phones?search=${inputValue}`)
+      .then((res) => res.json())
+      .then((data) => searchResult(data.data));
+    // Clear Input Field
+    input.value = "";
+    // Clear Error Message
+    error.innerHTML = "";
+  }
+  else {
+    error.innerText = "No result found!";
+    // Clear Input Field
+    input.value = "";
+    // Clear Search Result Field
+    result.innerHTML = "";
+  }
 };
 // Handle Search Result
 const searchResult = (phones) => {
