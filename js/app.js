@@ -86,7 +86,7 @@ const phoneDetails = (slug) => {
           <p class="card-text">Display Size: ${singleDetails?.mainFeatures?.displaySize??'Data Not Found'}</p>
           <p class="card-text">Memory: ${singleDetails?.mainFeatures?.memory??'Data Not Found'}</p>
           <p class="card-text">Storage: ${singleDetails?.mainFeatures?.storage??'Data Not Found'}</p>
-          <p class="card-text">Sensors: ${singleDetails.mainFeatures.sensors[0]??''}, ${singleDetails.mainFeatures.sensors[1]??''}, ${singleDetails.mainFeatures.sensors[2]??''}, ${singleDetails.mainFeatures.sensors[3]??''}, ${singleDetails.mainFeatures.sensors[4]??''}, ${singleDetails.mainFeatures.sensors[5]??''}</p>
+          <p class="card-text">Sensors: <br> ${singleDetails.mainFeatures.sensors[0]??''} <br> ${singleDetails.mainFeatures.sensors[1]??''} <br> ${singleDetails.mainFeatures.sensors[2]??''} <br> ${singleDetails.mainFeatures.sensors[3]??''} <br> ${singleDetails.mainFeatures.sensors[4]??''} <br> ${singleDetails.mainFeatures.sensors[5]??''} <br> ${singleDetails.mainFeatures.sensors[6]??''} <br> ${singleDetails.mainFeatures.sensors[7]??''} <br> ${singleDetails.mainFeatures.sensors[8]??''} <br> ${singleDetails.mainFeatures.sensors[9]??''} <br> ${singleDetails.mainFeatures.sensors[10]??''}</p>
           <p class="card-text">WLAN: ${singleDetails?.others?.WLAN??'Data Not Found'}</p>
           <p class="card-text">Bluetooth: ${singleDetails?.others?.Bluetooth??'Data Not Found'}</p>
           <p class="card-text">GPS: ${singleDetails?.others?.GPS??'Data Not Found'}</p>
