@@ -1,5 +1,7 @@
 // Handle Search Button
 const searchButton = () => {
+  // Show Spinner
+  document.getElementById("spinner").style.display = "block";
   const input = document.getElementById("input-value");
   const error = document.getElementById("error");
   const inputValue = input.value;
@@ -38,6 +40,8 @@ const searchButton = () => {
     input.value = "";
     // Clear Search Result Field
     result.innerHTML = "";
+    // Hide Spinner
+    document.getElementById("spinner").style.display = "none";
   }
 };
 // Handle Search Result
@@ -58,6 +62,8 @@ const searchResult = (phones) => {
       </div>
     `;
     result.appendChild(div);
+    // Hide Spinner
+    document.getElementById("spinner").style.display = "none";
   }
 };
 // Handle Details Result

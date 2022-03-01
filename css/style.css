@@ -26,6 +26,13 @@ header h1 {
                         /* MAIN */
 /*-------------------------------------------------------------*/
 
+#spinner {
+  display: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+
 #error {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
