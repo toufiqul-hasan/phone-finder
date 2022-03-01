@@ -5,7 +5,7 @@ const searchButton = () => {
   const inputValue = input.value;
   // Clear Search Result Field
   result.innerHTML = "";
-  // Clear Details Field
+  // Clear Phone Details Field
   details.innerHTML = "";
   if (
     inputValue.toLowerCase() == "apple" ||
@@ -14,6 +14,7 @@ const searchButton = () => {
     inputValue.toLowerCase() == "watch" ||
     inputValue.toLowerCase() == "samsung" ||
     inputValue.toLowerCase() == "galaxy" ||
+    inputValue.toLowerCase() == "tab" ||
     inputValue.toLowerCase() == "huawei" ||
     inputValue.toLowerCase() == "nova" ||
     inputValue.toLowerCase() == "mate" ||
