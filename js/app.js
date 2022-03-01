@@ -32,7 +32,7 @@ const searchButton = () => {
     // Clear Error Message
     error.innerHTML = "";
   } else {
-    error.innerText = "No result found!";
+    error.innerText = "No phone found!";
     // Clear Input Field
     input.value = "";
     // Clear Search Result Field
@@ -71,21 +71,21 @@ const phoneDetails = (slug) => {
       div.classList.add("mb-5");
       div.innerHTML = `
       <div class="card" style="width: 18rem;">
-        <img src="${singleDetails.image}" class="card-img-top" alt="...">
+        <img src="${singleDetails.image}" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">${singleDetails.name}</h5>
-          <p class="card-text">Release Date: ${singleDetails?.releaseDate}</p>
-          <p class="card-text">Storage: ${singleDetails.mainFeatures.storage}</p>
-          <p class="card-text">Display Size: ${singleDetails.mainFeatures.displaySize}</p>
-          <p class="card-text">Chipset: ${singleDetails.mainFeatures.chipSet}</p>
-          <p class="card-text">Memory: ${singleDetails.mainFeatures.memory}</p>
-          <p class="card-text">Sensors: ${singleDetails.mainFeatures.sensors[0]}, ${singleDetails.mainFeatures.sensors[1]}, ${singleDetails.mainFeatures.sensors[2]}, ${singleDetails.mainFeatures.sensors[3]}, ${singleDetails.mainFeatures.sensors[4]}, ${singleDetails.mainFeatures.sensors[5]}</p>
-          <p class="card-text">WLAN: ${singleDetails?.others?.WLAN}</p>
-          <p class="card-text">Bluetooth: ${singleDetails?.others?.Bluetooth}</p>
-          <p class="card-text">GPS: ${singleDetails?.others?.GPS}</p>
-          <p class="card-text">NFC: ${singleDetails?.others?.NFC}</p>
-          <p class="card-text">Radio: ${singleDetails?.others?.Radio}</p>
-          <p class="card-text">USB: ${singleDetails?.others?.USB}</p>
+          <p class="card-text">Release Date: ${singleDetails?.releaseDate||'Data Not Found'}</p>
+          <p class="card-text">Chipset: ${singleDetails?.mainFeatures?.chipSet??'Data Not Found'}</p>
+          <p class="card-text">Display Size: ${singleDetails?.mainFeatures?.displaySize??'Data Not Found'}</p>
+          <p class="card-text">Memory: ${singleDetails?.mainFeatures?.memory??'Data Not Found'}</p>
+          <p class="card-text">Storage: ${singleDetails?.mainFeatures?.storage??'Data Not Found'}</p>
+          <p class="card-text">Sensors: ${singleDetails.mainFeatures.sensors[0]??''}, ${singleDetails.mainFeatures.sensors[1]??''}, ${singleDetails.mainFeatures.sensors[2]??''}, ${singleDetails.mainFeatures.sensors[3]??''}, ${singleDetails.mainFeatures.sensors[4]??''}, ${singleDetails.mainFeatures.sensors[5]??''}</p>
+          <p class="card-text">WLAN: ${singleDetails?.others?.WLAN??'Data Not Found'}</p>
+          <p class="card-text">Bluetooth: ${singleDetails?.others?.Bluetooth??'Data Not Found'}</p>
+          <p class="card-text">GPS: ${singleDetails?.others?.GPS??'Data Not Found'}</p>
+          <p class="card-text">NFC: ${singleDetails?.others?.NFC??'Data Not Found'}</p>
+          <p class="card-text">Radio: ${singleDetails?.others?.Radio??'Data Not Found'}</p>
+          <p class="card-text">USB: ${singleDetails?.others?.USB??'Data Not Found'}</p>
         </div>
       </div>
       `;
