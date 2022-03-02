@@ -74,25 +74,26 @@ const phoneDetails = (slug) => {
       const alldetails = data.data;
       const singleDetails = alldetails;
       const div = document.createElement("div");
-      div.classList.add("col-lg-4");
       div.classList.add("mb-5");
+      // Clear Phone Details Field
+      details.innerHTML = "";
       div.innerHTML = `
       <div class="card" style="width: 18rem;">
         <img src="${singleDetails.image}" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">${singleDetails.name}</h5>
-          <p class="card-text">Release Date: ${singleDetails?.releaseDate||'Data Not Found'}</p>
-          <p class="card-text">Chipset: ${singleDetails?.mainFeatures?.chipSet??'Data Not Found'}</p>
-          <p class="card-text">Display Size: ${singleDetails?.mainFeatures?.displaySize??'Data Not Found'}</p>
-          <p class="card-text">Memory: ${singleDetails?.mainFeatures?.memory??'Data Not Found'}</p>
-          <p class="card-text">Storage: ${singleDetails?.mainFeatures?.storage??'Data Not Found'}</p>
-          <p class="card-text">Sensors: <br> ${singleDetails.mainFeatures.sensors[0]??''} <br> ${singleDetails.mainFeatures.sensors[1]??''} <br> ${singleDetails.mainFeatures.sensors[2]??''} <br> ${singleDetails.mainFeatures.sensors[3]??''} <br> ${singleDetails.mainFeatures.sensors[4]??''} <br> ${singleDetails.mainFeatures.sensors[5]??''} <br> ${singleDetails.mainFeatures.sensors[6]??''} <br> ${singleDetails.mainFeatures.sensors[7]??''} <br> ${singleDetails.mainFeatures.sensors[8]??''} <br> ${singleDetails.mainFeatures.sensors[9]??''} <br> ${singleDetails.mainFeatures.sensors[10]??''}</p>
-          <p class="card-text">WLAN: ${singleDetails?.others?.WLAN??'Data Not Found'}</p>
-          <p class="card-text">Bluetooth: ${singleDetails?.others?.Bluetooth??'Data Not Found'}</p>
-          <p class="card-text">GPS: ${singleDetails?.others?.GPS??'Data Not Found'}</p>
-          <p class="card-text">NFC: ${singleDetails?.others?.NFC??'Data Not Found'}</p>
-          <p class="card-text">Radio: ${singleDetails?.others?.Radio??'Data Not Found'}</p>
-          <p class="card-text">USB: ${singleDetails?.others?.USB??'Data Not Found'}</p>
+          <p class="card-text">Release Date: ${singleDetails?.releaseDate||'Will Update Soon'}</p>
+          <p class="card-text">Chipset: ${singleDetails?.mainFeatures?.chipSet??'Will Update Soon'}</p>
+          <p class="card-text">Display Size: ${singleDetails?.mainFeatures?.displaySize??'Will Update Soon'}</p>
+          <p class="card-text">Memory: ${singleDetails?.mainFeatures?.memory??'Will Update Soon'}</p>
+          <p class="card-text">Storage: ${singleDetails?.mainFeatures?.storage??'Will Update Soon'}</p>
+          <p class="card-text">Sensors: ${singleDetails?.mainFeatures?.sensors??'Will Update Soon'}</p>
+          <p class="card-text">WLAN: ${singleDetails?.others?.WLAN??'Will Update Soon'}</p>
+          <p class="card-text">Bluetooth: ${singleDetails?.others?.Bluetooth??'Will Update Soon'}</p>
+          <p class="card-text">GPS: ${singleDetails?.others?.GPS??'Will Update Soon'}</p>
+          <p class="card-text">NFC: ${singleDetails?.others?.NFC??'Will Update Soon'}</p>
+          <p class="card-text">Radio: ${singleDetails?.others?.Radio??'Will Update Soon'}</p>
+          <p class="card-text">USB: ${singleDetails?.others?.USB??'Will Update Soon'}</p>
         </div>
       </div>
       `;
