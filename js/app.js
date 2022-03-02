@@ -1,5 +1,7 @@
+let allphone = [];
 // Handle Search Button
 const searchButton = () => {
+  allphone = [];
   // Show Spinner
   document.getElementById("spinner").style.display = "block";
   const input = document.getElementById("input-value");
@@ -45,7 +47,18 @@ const searchButton = () => {
   }
 };
 // Handle Search Result
+
 const searchResult = (phones) => {
+  const restphones = phones.slice(20);
+  for (const restphone of restphones) {
+    allphone.push(restphone);
+  }
+  if (phones.length > 20) {
+    document.getElementById("more").style.display = "block";
+  } 
+  else {
+    document.getElementById("more").style.display = "none";
+  }
   const first20Phones = phones.slice(0, 20);
   for (const phone of first20Phones) {
     const div = document.createElement("div");
