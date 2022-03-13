@@ -44,23 +44,22 @@ const searchButton = () => {
     result.innerHTML = "";
     // Hide Spinner
     document.getElementById("spinner").style.display = "none";
-    // Hide Load More Button
-    document.getElementById("more").style.display = "none";
+    // Hide Show More Button
+    document.getElementById("show-more").style.display = "none";
   }
 };
 // Handle Search Result
 const searchResult = (phones) => {
-  const restphones = phones.slice(20);
-  for (const restphone of restphones) {
-    allphone.push(restphone);
-  }
   if (phones.length > 20) {
-    // Show Load More Button
-    document.getElementById("more").style.display = "block";
-  } 
-  else {
-    // Hide Load More Button
-    document.getElementById("more").style.display = "none";
+    const restphones = phones.slice(20);
+    for (const restphone of restphones) {
+      allphone.push(restphone);
+    }
+    // Show Show More Button
+    document.getElementById("show-more").style.display = "block";
+  } else {
+    // Hide Show More Button
+    document.getElementById("show-more").style.display = "none";
   }
   const first20Phones = phones.slice(0, 20);
   for (const phone of first20Phones) {
@@ -114,5 +113,6 @@ const phoneDetails = (slug) => {
       </div>
       `;
       details.appendChild(div);
+      window.scrollTo(0, 190);
     });
 };
