@@ -41,6 +41,7 @@ header h1 {
 
 #show-more {
   display: none;
+  margin-bottom: 50px;
 }
 
 /*-------------------------------------------------------------*/
@@ -48,7 +49,10 @@ header h1 {
 /*-------------------------------------------------------------*/
 
 footer {
+  background-color: #808080;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  margin-top: 700px;
-  text-align: center;
+  position: fixed;
 }
